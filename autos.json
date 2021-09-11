@@ -1,0 +1,45 @@
+[{
+    "name": "Fiat Way",
+    "description": "Fiat Uno Evo Way es un vehículo con grandes funcionalidades y que incorpora modernas tecnologías. Impulsado por el clásico motor 1.4L trasversal delantero de todas las versiones de Uno, su desempeño en rendimiento y emisiones ha sido más que probado. Ambas versiones incluyen, aire acondicionado, computadora de a bordo, cierre centralizado y espejos exteriores con señaleros. La versión full viene con radio CD-MP3-USB mientras que la extrafull incorpora un equipo de radio integrado con Bluetooth audio streaming y USB",
+    "cost": 14500,
+    "currency": "USD",
+    "soldCount": 52,
+    "images": [
+        "img/prod2.jpg",
+        "img/prod2_1.jpg",
+        "img/prod2_2.jpg",
+        "img/prod2_3.jpg",
+        "img/prod2_4.jpg"
+    ],
+    "relatedProducts": [1, 3]
+},
+{
+    "name": "Suzuki Celerio",
+    "description": "infoinfoinfo",
+    "cost": 12500,
+    "currency": "USD",
+    "soldCount": 25,
+    "images": [
+        "img/prod3.jpg",
+        "img/prod3_1.jpg",
+        "img/prod3_2.jpg",
+        "img/prod3_3.jpg",
+        "img/prod3_4.jpg"
+    ],
+    "relatedProducts": [1, 3]
+},
+{
+    "name": "Peugeot 208",
+    "description": "infoinfoinfo",
+    "cost": 15200,
+    "currency": "USD",
+    "soldCount": 17,
+    "images": [
+        "img/prod4.jpg",
+        "img/prod4_1.jpg",
+        "img/prod4_2.jpg",
+        "img/prod4_3.jpg",
+        "img/prod4_4.jpg"
+    ],
+    "relatedProducts": [1, 3]
+}]

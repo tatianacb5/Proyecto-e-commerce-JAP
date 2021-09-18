@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function MostrarAuto()
              contenido = ` 
             <tr>
             <td><h4>` + datos[i].name + `</h4> </td>
-            <img src="` + datos[i].imgSrc + `" alt="` + datos[i].description + `" class="img-thumbnail" width="230" height="230"/>
+            <img src="` + datos[i].images + `" alt="` + datos[i].description + `" class="img-thumbnail" width="230" height="230"/>
             <td> ` + datos[i].description + ` </td>
             <td> ` + datos[i].cost + ` USD </td>
             <small class="text-muted">` + datos[i].soldCount + ` artículos</small>
@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", function MostrarAuto()
             document.getElementById("nombre").innerHTML+=datos[i].name; 
             document.getElementById("descripcion").innerHTML+=datos[i].description
             document.getElementById("precio").innerHTML+=datos[i].cost 
-            document.getElementById("imagenes").innerHTML+='<img src="' + datos[i].imgSrc + '"'+ '/>'
+            document.getElementById("imagenes").innerHTML+='<img src="' + datos[i].images + '"'+ '/>'
             document.getElementById("vendidos").innerHTML+=datos[i].soldCount
             
             comments(i);
+            
             
             }
         }}
@@ -39,25 +40,6 @@ document.addEventListener("DOMContentLoaded", function MostrarAuto()
 
 } )
 
-
-function imagenes(array){
-
-    let pictures = "";
-
-    for(let i = 0; i < array.length; i++){
-        let imagen = array[i];
-
-        pictures += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imagen + `" alt="">
-            </div>
-        </div>
-        `
-
-        document.getElementById("imagenes").innerHTML = pictures;
-    }
-}
 
 function comments(numero){
 
@@ -70,6 +52,9 @@ function comments(numero){
             <div>`+ datos[numero].description +`</div>
             <div>Usuario: `+ datos[numero].user +`</div>
             <div>`+ datos[numero].dateTime +`</div>
+            <div>`+ datos[numero].score +` <i class="active fa fa-star"></i>
+            </div>
+
             `
             document.getElementById("comentarios").innerHTML += comentar
        

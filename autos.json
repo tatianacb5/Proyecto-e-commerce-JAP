@@ -1,4 +1,19 @@
 [{
+    "name": "Chevrolet Onix Joy",
+    "description": "El Chevrolet Onix Joy viene con detalles en la grilla frontal y retrovisores en negro “High Gloss”. Mientras que el parachoques es pintado del color del vehículo, el farol viene con máscara negra con detalles cromados.",
+    "cost": 13500,
+    "currency": "USD",
+    "soldCount": 14,
+    "images": [
+        "img/prod1.jpg",
+        "img/prod1_1.jpg",
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
+    ],
+    "relatedProducts": [1, 3]
+},
+{
     "name": "Fiat Way",
     "description": "Fiat Uno Evo Way es un vehículo con grandes funcionalidades y que incorpora modernas tecnologías. Impulsado por el clásico motor 1.4L trasversal delantero de todas las versiones de Uno, su desempeño en rendimiento y emisiones ha sido más que probado. Ambas versiones incluyen, aire acondicionado, computadora de a bordo, cierre centralizado y espejos exteriores con señaleros. La versión full viene con radio CD-MP3-USB mientras que la extrafull incorpora un equipo de radio integrado con Bluetooth audio streaming y USB",
     "cost": 14500,
@@ -15,7 +30,7 @@
 },
 {
     "name": "Suzuki Celerio",
-    "description": "infoinfoinfo",
+    "description": "El Suzuki Celerio es un urbano de cinco puertas y 3,60 metros de longitud. Es el coche más pequeño fabricado por Suzuki, y es una alternativa a coches pequeños para la ciudad como el Hyundai i10, el Opel Karl o el Toyota Aygo. Es un producto básico, barato y sólo disponible con una motorización, apto para poco más que entornos urbanos y periurbanos.",
     "cost": 12500,
     "currency": "USD",
     "soldCount": 25,
@@ -30,7 +45,7 @@
 },
 {
     "name": "Peugeot 208",
-    "description": "infoinfoinfo",
+    "description": "El diseño delantero del vehículo adopta la nueva firma lumínica asemejándose a los colmillos de un león mientras que el nombre del modelo nuevamente está colocado en el frente con un diseño gráfico nuevo y moderno. También el logo del león se colocó en posición vertical sobre la grilla frontal.",
     "cost": 15200,
     "currency": "USD",
     "soldCount": 17,

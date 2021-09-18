@@ -24,21 +24,39 @@ document.addEventListener("DOMContentLoaded", function (e) {
 function show(json){
     
     document.getElementById("products").innerHTML="";  
-
+    
     for(let i = 0; i < json.length; i ++ ) {
-            let lista =  ` 
-            <tr>
-            <td><h4>` + json[i].name + `</h4> </td>
-            <img src="` + json[i].imgSrc + `" alt="` + json[i].description + `" class="img-thumbnail" width="230" height="230"/>
-            <td> ` + json[i].description + ` </td>
-            <td> ` + json[i].cost + ` USD </td>
-            <small class="text-muted">` + json[i].soldCount + ` artículos</small>
-            </tr> 
-            `
+        let lista =  `
+            <a href="javascript:setearCriterio(`+ "'" +json[i].name+ "'" +`);"  class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="` + json[i].imgSrc + `" alt="` + json[i].description + `" class="img-thumbnail">
+                    </div>
+                    <div class="col">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">`+ json[i].name +`</h4>
+                            <small class="text-muted">` + json[i].cost + ` USD </small>
 
+                            <small class="text-muted">` + json[i].soldCount + ` artículos</small>
+
+                        </div>
+                        <p class="mb-1">` + json[i].description + `</p>
+                    </div>
+                </div>
+            </a>
+            `
           document.getElementById("products").innerHTML+=lista  
     }
 }
+
+function setearCriterio(nombreAuto)
+{
+    console.log("Hola");
+    localStorage.setItem("AutoMostrado",nombreAuto);
+    window.location = "product-info.html"
+
+}
+    
 
 function validador(dato){
 
@@ -116,7 +134,7 @@ function relevantes(){
 
      show(json_Ordenado)
     })
-    .catch(error=> alert('error:'  +error)); 
+   .catch(error=> alert('error:'  +error)); 
 
 }
 
@@ -127,7 +145,7 @@ function organizar(){
      let json_Ordenado = orden(datos, precioMayor)
      show(json_Ordenado)
     })
-    .catch(error=> alert('error:'  +error)); 
+  .catch(error=> alert('error:'  +error)); 
 
 }
 
@@ -143,7 +161,7 @@ function organizarDesc() {
         show(json_Ordenado)
         
     })
-    .catch(error=> alert('error:'  +error)); 
+   .catch(error=> alert('error:'  +error)); 
 
 }
    

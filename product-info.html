@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -23,16 +24,34 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id = "infouser" style="display: none;"></a>
+
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
+</div>
+  <h2 id = "nombre"></h2>
+  <p id = "descripcion"></p>
+ <div> Precio en USD: <p id="precio"></p> </div>
+    <div>Autos vendidos: <p id = "vendidos"></p></div>
+    <dd>
+      <div class="row text-center text-lg-left pt-2" id="imagenes">
+      </div>
+    </dd>
+    
+    <strong>Opiniones: </strong>
+    <p id="comentarios"></p>  
+    
+  <br>
+  <strong>Dejanos saber tu opinión:</strong> <br>
+  <br>
+ 
+  <textarea name="texto" id="cuadro" cols="60" rows="5" placeholder="Escriba un comentario.."></textarea> <br>
+  <button type="submit">Enviar</button>
+  <select name="select">
+    <option value="value1"> 1</option>
+    <option value="value2" selected>2</option>
+    <option value="value3"> 3</option>
+  </select>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -54,6 +73,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script async src="js/products.js"></script>
 
 </body>
 

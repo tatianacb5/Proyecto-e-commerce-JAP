@@ -51,7 +51,6 @@ function show(json){
 
 function setearCriterio(nombreAuto)
 {
-    console.log("Hola");
     localStorage.setItem("AutoMostrado",nombreAuto);
     window.location = "product-info.html"
 

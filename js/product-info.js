@@ -28,9 +28,8 @@ document.addEventListener("DOMContentLoaded", function MostrarAuto()
             document.getElementById("precio").innerHTML+=datos[i].cost 
             document.getElementById("imagenes").innerHTML+='<img src="' + datos[i].images + '"'+ '/>'
             document.getElementById("vendidos").innerHTML+=datos[i].soldCount
-            
             comments(i);
-            
+            mostrarImagenes(datos[i].images);
             
             }
         }}
@@ -63,4 +62,25 @@ function comments(numero){
  })
     .catch(error=> alert('error:'  +error)); 
   
+}
+
+
+
+function mostrarImagenes(array){
+
+    let imagen = "";
+
+    for(let i = 0; i < array.length; i++){
+        let imageSrc = array[i];
+
+        imagen += `
+        <div class="col-lg-3 col-md-4 col-6">
+            <div class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
+            </div>
+        </div>
+        `
+
+        document.getElementById("imagenes").innerHTML = imagen;
+    }
 }

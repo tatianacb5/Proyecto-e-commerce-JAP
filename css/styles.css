@@ -162,3 +162,9 @@ a.custom-card:hover {
 .star-rating input[type=radio]:checked ~ label {
   color: #ffbf00
 }
+
+#imagenes {
+  height: 50%; 
+  width: 50%; 
+}
+

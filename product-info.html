@@ -23,9 +23,15 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id = "infouser" style="display: none;"></a>
-
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="infouser" style="display: none;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Ver mi carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" href="index.html" id = "out">Cerrar Sesión</a>
+        </div>
+      </div>
     </div>
   </nav>
 </div>
@@ -34,9 +40,10 @@
  <div> Precio en USD: <p id="precio"></p> </div>
     <div>Autos vendidos: <p id = "vendidos"></p></div>
     <dd>
-      <div class="row text-center text-lg-left pt-2" id="imagenes">
+      <div id = "imagenes"></div>
       </div>
     </dd>
+    <br><br>
     
     <strong>Opiniones: </strong>
     <p id="comentarios"></p>  
@@ -72,7 +79,10 @@
   <br><br>
   <textarea name="texto" id="cuadro" cols="40" rows="4" placeholder="Escriba un comentario.."></textarea> <br>
   <button type="submit">Enviar</button>
-
+<br><br>
+  <strong>Autos Relacionados</strong>
+  <div id ="relacionados"></div> 
+  <br><br>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -95,6 +105,8 @@
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
   <script async src="js/products.js"></script>
+  <script src="js/login.js"></script>
+
 
 </body>
 

@@ -47,4 +47,13 @@ document.addEventListener("DOMContentLoaded", function(e){
 
   }
 
+  //elimina datos del usuario logueado
+  
+  if (document.getElementById("out")) {
+    document.getElementById("out").addEventListener("click", function () {
+      localStorage.removeItem('UserLogged');
+      window.location = 'idex.html';
+    })
+  }
+
 });

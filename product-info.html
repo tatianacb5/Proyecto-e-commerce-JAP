@@ -35,18 +35,32 @@
     </div>
   </nav>
 </div>
-  <h2 id = "nombre"></h2>
-  <p id = "descripcion"></p>
+  <h2 id = "nombre" class="text-center"></h2> <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7" id="imagenes"></div>
+      <div class="col-sm-5" id="descripcion">
+      </div>
+  </div>
+  
+
+
  <div> Precio en USD: <p id="precio"></p> </div>
     <div>Autos vendidos: <p id = "vendidos"></p></div>
     <dd>
-      <div id = "imagenes"></div>
-      </div>
+      
     </dd>
     <br><br>
     
-    <strong>Opiniones: </strong>
-    <p id="comentarios"></p>  
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Opiniones:</h5>
+        <div class="shadow p-3 mb-6 bg-white rounded">
+        <p class="card-text" id="comentarios"></p>
+      </div>
+    </div>
+  </div>
     
   <br>
   <strong>Dejanos saber tu opinión:</strong>
@@ -77,10 +91,14 @@
     </label>
   </div>
   <br><br>
-  <textarea name="texto" id="cuadro" cols="40" rows="4" placeholder="Escriba un comentario.."></textarea> <br>
-  <button type="submit">Enviar</button>
-<br><br>
-  <strong>Autos Relacionados</strong>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"></label>
+    <textarea class="form-control" id="cuadro" rows="3" cols="2" placeholder="Escriba un comentario.."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button><br><br>
+  <div class="text-center p-4">
+    <h2>Autos relacionados</h2>
+  </div>
   <div id ="relacionados"></div> 
   <br><br>
   <footer class="text-muted">

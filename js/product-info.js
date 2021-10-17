@@ -71,7 +71,6 @@ function mostrarImagenes(array){
     let imagen = "";
 
         imagen += `
-
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -112,11 +111,21 @@ document.addEventListener("DOMContentLoaded", function relacionados(){
         let related; 
 
         related=  ` 
-        <div><strong>`+ datos[1].name +`</strong></div>
-        <img src="`+ datos[1].imgSrc+`" width="300px" height="200px"> 
-        <div><strong>`+ datos[3].name +`</strong></div>
-        <img src="`+ datos[3].imgSrc +`"  width="300px" height="200px"> 
+      
+        
 
+        <div class="container px-lg-5">
+  <div class="row mx-lg-n5">
+    <div class="col py-3 px-lg-5">
+    <div><strong>`+ datos[1].name +`</strong></div>
+    <img src="`+ datos[1].imgSrc+`" class="rounded" width="300px" height="200px"> 
+    </div>
+    <div class="col py-3 px-lg-5">
+    <div><strong>`+ datos[3].name +`</strong></div>
+        <img src="`+ datos[3].imgSrc +`" class="rounded" width="300px" height="200px"> 
+    </div>
+  </div>
+</div>
         `
             document.getElementById("relacionados").innerHTML += related;
         } )

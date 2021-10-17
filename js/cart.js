@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                   <td><p>Precio por unidad: ` + datos.articles[i].unitCost + `</p> </td>    
                   <td><p>Moneda:  ` + datos.articles[i].currency + `</p> </td> 
                    <div>    
-                    <button type="button" class="btn btn-light" onclick="restarItem( ` + i+ ','+ datos.articles[i].unitCost + ','+ datos.articles[i].currency + `)">-</button>
+                    <button type="button" class="btn btn-light" onclick="restarItem( ` + i+ ','+ datos.articles[i].unitCost + ','+ "'"+ datos.articles[i].currency +"'" + `)">-</button>
                     <input value="1" id= `+ i +` >  
         
                     <button type="button" class="btn btn-light" onclick="sumarItem( ` + i+ ','+ datos.articles[i].unitCost+ ','+ "'"+ datos.articles[i].currency +"'"  +`)">+</button>
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-//intentando calcular los datos de entrada
+//calculo de los datos de entrada
  function calculoInicial(item, vCost, moneda){
 if(moneda=='USD'){
     let saldoEnPesos=vCost*40
@@ -78,7 +78,6 @@ function sumarItem(itemId, unitCost, moneda)
     if(moneda=='USD'){
             let saldoEnPesos=unitCost*40
         
-        //Para no tener menor a 0 en el input 
         if( cambiarle_valor.value == 0 )
         {
             cambiarle_valor.value ++
@@ -112,19 +111,30 @@ function sumarItem(itemId, unitCost, moneda)
     calculaTotal();
 }
 
-function restarItem(itemId, unitCost)
+function restarItem(itemId, unitCost,moneda)
 {
     let obtener=document.getElementById('subtotal').innerText
     var cambiarle_valor= document.getElementById(itemId)
-    //Para no tener menor a 0 en el input 
+    if(moneda=='USD'){
+        let saldoEnPesos=unitCost*40
+    
+
     if( cambiarle_valor.value > 0 )
      {
         cambiarle_valor.value --
-        let resultado=parseInt(obtener)-unitCost ;
+        let resultado=parseInt(obtener)-saldoEnPesos ;
         document.getElementById('subtotal').innerHTML = resultado
      }
         
-
+    }
+    else{
+        if( cambiarle_valor.value > 0 )
+        {
+           cambiarle_valor.value --
+           let resultado=parseInt(obtener)-unitCost ;
+           document.getElementById('subtotal').innerHTML = resultado
+        }
+    }
     calcularEnvios();
     calculaTotal();
 }

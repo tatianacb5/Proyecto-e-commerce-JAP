@@ -27,23 +27,28 @@ function show(json){
     
     for(let i = 0; i < json.length; i ++ ) {
         let lista =  `
-            <a href="javascript:setearCriterio(`+ "'" +json[i].name+ "'" +`);"  class="list-group-item list-group-item-action">
+        <div class="conteiner">
+
+            <a href="javascript:setearCriterio(`+ "'" +json[i].name+ "'" +`);"  class="card mb-4 shadow-sm custom-card">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="` + json[i].imgSrc + `" alt="` + json[i].description + `" class="img-thumbnail">
+                    <div class="col-md-4">
+                        <img src="` + json[i].imgSrc + `" alt="` + json[i].description + `" class="bd-placeholder-img card-img-top">
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ json[i].name +`</h4>
-                            <small class="text-muted">` + json[i].cost + ` USD </small>
+                        <div class="card-body">
+                        <h4 class="mb-1">`+ json[i].name +`</h4>
 
-                            <small class="text-muted">` + json[i].soldCount + ` artículos</small>
+                        <p class="card-text">` + json[i].soldCount + `</p>
+                      <p class="card-text">` + json[i].cost + ` USD</p>
+                    </div>
 
                         </div>
-                        <p class="mb-1">` + json[i].description + `</p>
+                        <p class="m-3">` + json[i].description + `</p>
                     </div>
-                </div>
-            </a>
+                    </div>
+                    </div>
+                    </a>
             `
           document.getElementById("products").innerHTML+=lista  
     }

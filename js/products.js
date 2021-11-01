@@ -27,28 +27,19 @@ function show(json){
     
     for(let i = 0; i < json.length; i ++ ) {
         let lista =  `
-        <div class="conteiner">
-
-            <a href="javascript:setearCriterio(`+ "'" +json[i].name+ "'" +`);"  class="card mb-4 shadow-sm custom-card">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="` + json[i].imgSrc + `" alt="` + json[i].description + `" class="bd-placeholder-img card-img-top">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                        <div class="card-body">
-                        <h4 class="mb-1">`+ json[i].name +`</h4>
-
-                        <p class="card-text">` + json[i].soldCount + `</p>
-                      <p class="card-text">` + json[i].cost + ` USD</p>
-                    </div>
-
-                        </div>
-                        <p class="m-3">` + json[i].description + `</p>
-                    </div>
-                    </div>
-                    </div>
-                    </a>
+       
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+            <img src="` + json[i].imgSrc + `" class="card-img-top" alt="` + json[i].description + `">
+            <div class="card-body">
+            <h5 class="card-title">`+ json[i].name +`</h5>
+            <p class="card-text">` + json[i].soldCount + " Vendidos"+`</p>
+            <p class="card-text">`+"USD " + json[i].cost + `</p>
+            <p class="card-text">` + json[i].description + `</p>
+            <a href="javascript:setearCriterio(`+ "'" +json[i].name+ "'" +`);" class="btn btn-primary">Ver producto</a>
+            </div>  
+            </div>
+            </div>
             `
           document.getElementById("products").innerHTML+=lista  
     }

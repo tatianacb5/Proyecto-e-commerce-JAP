@@ -142,9 +142,11 @@ function restarItem(itemId, unitCost,moneda)
 function calcularEnvios(){
     let subtotal = document.getElementById('subtotal').innerText
     let envioP = document.getElementById('envio').value
+   
         if (envioP === 'value1') {
            let resultado= ((15*subtotal)/100).toFixed(2);
            document.getElementById('porcentaje').innerText=resultado;
+           
    
        } else if (envioP === 'value2'){
    
@@ -167,14 +169,13 @@ document.getElementById('envio').addEventListener("change", function(){
 
 
 function finalizarCompra() {
-    let selecciontransfer = document.getElementById('check1').checked
-    let seleccioncredito = document.getElementById('check2').checked
-    document.getElementById('envio').value
-    document.getElementById('direccion').value
-    document.getElementById('pais').value
+    let envio = document.getElementById('envio').value
+    let direccion = document.getElementById('direccion').value
+    let pais = document.getElementById('pais').value
+    let metodoDePago=document.getElementById('avisoId').innerText;
 
-       if((selecciontransfer || seleccioncredito) && envio.value != '' && direccion.value != '' &&
-       pais.value != ''){
+       if(envio != '' && direccion != '' && pais != '' && 
+       metodoDePago==''){
 
         document.getElementById('alert').innerHTML =
         `     
@@ -198,6 +199,36 @@ function finalizarCompra() {
 
 }
 
+//modal metodo de pago
+
+       function completarlo() {
+         let credito = document.getElementById('check2').checked
+         let transferir = document.getElementById('check1').checked
+            let tdc = document.getElementById('tarjeta').value
+            let vencimiento = document.getElementById('venc').value
+            let cod = document.getElementById('cvv').value
+            let cuenta = document.getElementById('cuenta').value
+            let aviso=document.getElementById('avisoId');
+          
+            if(credito && tdc !='' && vencimiento!='' && cod !=''){
+                
+                
+                aviso.innerHTML=""
+            }   
+        
+            else if(transferir&& cuenta!=""){
+                
+              
+                aviso.innerHTML=""
+            }
+            else{
+                
+                
+                aviso.innerHTML="Recorda completar todos los campos"
+            }
+            
+           
+ }
 
 //suma el subtotal más envío
 function calculaTotal(){

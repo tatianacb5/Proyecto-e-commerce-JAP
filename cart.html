@@ -53,35 +53,66 @@
     </div>
   </nav>
 
-  <h3>Mi carrito</h3> <br>
+  <h3> <center>Mi carrito</center> </h3> <br>
 
+  
 <div class="container">
   <div class="row">
     <div class="col-sm-7" id="art"></div>
     <div class="col-sm-5">
       <div class="card">
         <div class="card-body">
-        <strong>Seleccioná el método de pago:</strong>  <br>
-          <input type="radio" id="check1" name="one"> Transferencia bancaria <br>
-          <input type="radio" id="check2" name="one"> Tarjeta de crédito 
-      </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
+          <strong>Seleccioná método de envío</strong> 
 
-          <strong>Seleccioná método de envío</strong>
           <select name="select" id="envio">
-            <option value="value1">Premium (2-5 días)</option>
-            <option value="value2">Express(5-8 días)</option>
-            <option value="value3">Santandrt (12 a 15 días)</option> 
+            <option value="value1">Premium (2-5 días, 15%)</option>
+            <option value="value2">Express(5-8 días, 7%)</option>
+            <option value="value3">Santandrt (12 a 15 días, 5%)</option> 
           </select> <br>
-          <p>Ingresá tu dirección:</p>
+          <p>Ingresá tu dirección:</p> <br>
           <p>Domicilio: <input type="text" name="adress" size="20" id="direccion" ></p> 
           <p>País: <input type="text" name="country" size="20" id="pais"></p>
         </div>
       </div>
     </div>
+      </div>
+    </div>
   </div> <br>
+
+  <div class="container">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Métodos de pago
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Métodos de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="radio" class="datospago" id="check2" name="one"> Tarjeta de crédito   <br> <hr>
+        <p>Número de tarjeta <input type="text" class="form-control datospago" name="tdc" size="20" id="tarjeta" ></p>
+        <p>Vencimiento (MM/AA) <input type="text" class="form-control datospgo" name="tdc" size="20" id="venc" ></p>
+        <p>CVV (3 dígitos reverso) <input type="text" class="form-control datospago" name="tdc" size="20" id="cvv" ></p>
+         <hr>
+        <input type="radio" id="check1" name="one"> Transferencia bancaria <br> <hr>
+        <p>Número de cuenta <input type="text" class="form-control datoscuenta" name="transfer" size="20" id="cuenta" ></p> 
+        <p id="avisoId">Completa todos los campos</p>   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary" onclick="completarlo()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="row">
     <div class="col-sm"></div>
     <div class="col-sm"></div>
@@ -92,13 +123,12 @@
       <p>Costo de envío: <span id="porcentaje"></span></p>
       <hr>
       <p class="text-right">Total: <span id="total"></span>UYU</p>
-      <button type="button" class="btn btn-primary btn-sm" id="vaciar">Vaciar Carrito</button>
       <button type="button" class="btn btn-primary btn-sm" id="final" onclick="finalizarCompra()">Finalizar Compra</button>
       <div id="alert"></div>
     </div>
   </div>
 </div>
-
+</div>
 
 <div id="spinner-wrapper">
     <div class="lds-ring">
